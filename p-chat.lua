@@ -10,6 +10,7 @@ end
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "PChatGui"
 screenGui.ResetOnSpawn = false
+screenGui.DisplayOrder = 999
 screenGui.Parent = playerGui
 
 local pChatButton = Instance.new("TextButton")
@@ -77,7 +78,6 @@ local function addMessage(senderName, messageText)
     msgLabel.TextXAlignment = Enum.TextXAlignment.Left
     msgLabel.TextWrapped = true
     
-    -- İsimleri tek renk (örneğin açık gri/beyaz) yapmak için RichText kullanıyoruz
     msgLabel.RichText = true
     msgLabel.Text = string.format("<b>%s</b>: %s", senderName, messageText)
     msgLabel.Parent = messageScroll
